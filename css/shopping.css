@@ -97,7 +97,6 @@ header > .hd_container {
   left: calc(50% - 490px);
   z-index: 99999;
   width: 1000px;
-  margin: 0 auto;
   background-color: #fff;
 }
 
@@ -228,6 +227,7 @@ section.main .mn_img > .mn_slidecontainer > li > a {
 section.main .mn_img > .mn_slidecontainer > li.mn_1 {
   left: 0;
   background-image: url(./../images/main_1.jpg);
+  background-size: 170%;
   background-position: center -100px;
 }
 
@@ -239,10 +239,14 @@ section.main .mn_img > .mn_slidecontainer > li.mn_2 {
 
 section.main .mn_img > .mn_slidecontainer > li.mn_3 {
   background-image: url(./../images/main_3.jpg);
+  background-size: 140%;
+  background-position: center 0;
 }
 
 section.main .mn_img > .mn_slidecontainer > li.mn_4 {
   background-image: url(./../images/main_4.jpg);
+  background-size: 140%;
+  background-position: center -70px;
 }
 
 section.main .mn_title {
@@ -325,7 +329,7 @@ section.main > .mn_contact > a.mn_btn {
   width: 150px;
   height: 40px;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 800;
   text-align: center;
   line-height: 40px;
@@ -335,7 +339,7 @@ section.main > .mn_contact > a.mn_btn {
 }
 
 section.main > .mn_contact > a.mn_btn:hover {
-  color: #042839;
+  color: #000;
   background-color: #fff;
 }
 
@@ -399,9 +403,14 @@ footer .ft_container .ft_contact .ft_top .ft_comnu {
 footer .ft_container .ft_contact .ft_top .ft_comnu li a {
   display: block;
   padding: 0 30px;
-  color: #fff;
+  color: #838383;
   font-weight: 800;
-  border-right: 1px solid #fff;
+  border-right: 1px solid #838383;
+}
+
+footer .ft_container .ft_contact .ft_top .ft_comnu li a:hover {
+  color: #a7a7a7;
+  text-decoration: underline;
 }
 
 footer .ft_container .ft_contact .ft_top .ft_comnu li:nth-of-type(1) > a {
@@ -460,9 +469,10 @@ footer .ft_container .ft_contact .ft_b .ft_left span a:hover {
 footer .ft_container .ft_contact .ft_b .ft_left address {
   margin-top: 30px;
   padding-top: 10px;
+  color: #838383;
   line-height: 25px;
   font-weight: 800;
-  border-top: 1px solid #fff;
+  border-top: 1px solid #838383;
 }
 
 footer .ft_container .ft_contact .ft_b .ft_right {
