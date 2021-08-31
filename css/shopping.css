@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "noto sans CJK KR";
+  color: #222;
+  font-size: 10px;
+  line-height: 1.2;
+  box-sizing: border-box;
+}
+
+body,
+header,
+section,
+article,
+footer,
+nav,
+aside,
+mark,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+a,
+img,
+dl,
+dt,
+dd,
+address,
+code,
+em,
+strong,
+blockquote,
+q {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+q {
+  quotes: none;
+}
+
+em,
+address {
+  font-style: normal;
+}
+
+hr {
+  display: none;
+}
+
+a:link {
+  color: #222;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #222;
+}
+
+a:active {
+  color: #222;
+}
+
+#wrap {
+  display: grid;
+  grid-template: repeat(3, auto)/1fr;
+}
+
+header {
+  height: 70px;
+  padding-top: 30px;
+}
+
+header > .hd_container {
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+header > .hd_container > .logo {
+  width: 120px;
+  height: 50px;
+  padding: 5px;
+  margin: 0 auto 20px;
+}
+
+header > .hd_container > .logo > a {
+  width: 120px;
+  height: 50px;
+}
+
+header > .hd_container > .logo > a > img {
+  display: block;
+}
+
+header > .hd_container > .user {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 140px;
+}
+
+header > .hd_container > .user > li {
+  width: 70px;
+  border-right: 1px solid #555;
+}
+
+header > .hd_container > .user > li > a {
+  display: block;
+  color: #555;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+header > .hd_container > .user > li:nth-of-type(2) {
+  border-right: none;
+}
+
+header > .hd_container > .user > li:hover {
+  color: #222;
+  font-weight: 800;
+}
+
+header > .hd_container > nav > .gnb {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+  box-sizing: border-box;
+}
+
+header > .hd_container > nav > .gnb > li {
+  width: 150px;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+}
+
+header > .hd_container > nav > .gnb > li:hover, header > .hd_container > nav > .gnb > li.on {
+  padding-bottom: 2px;
+  border-bottom: 3px solid #7c1e42;
+}
+
+header > .hd_container > nav > .gnb > li:hover a, header > .hd_container > nav > .gnb > li.on a {
+  color: #7c1e42;
+  font-weight: 800;
+}
+
+header > .hd_container > nav > .gnb > li > a {
+  display: block;
+  font-weight: 800;
+}
+
+header > .hd_container > nav > .gnb > li > ol {
+  display: none;
+}
+
+header > .hd_container > nav > .gnb > li > ol > li > a {
+  display: block;
+}
+
+section.main {
+  position: relative;
+  width: 1000px;
+  height: 600px;
+  margin: 55px auto 0;
+  background-image: url(./../images/main_1.jpg);
+  background-position: center -100px;
+  background-size: cover;
+}
+
+section.main:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(50% - 100px);
+  width: 1000px;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+section.main .mn_title {
+  position: relative;
+  z-index: 9999;
+  width: 1000px;
+}
+
+section.main .mn_title .mn_title_box {
+  position: absolute;
+  top: 200px;
+  left: calc(50% - 25%);
+  width: 50%;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+}
+
+section.main .mn_title .mn_title_box > h4 {
+  margin: 0 auto;
+  padding: 5px;
+  font-size: 1.3rem;
+  width: 270px;
+  text-align: center;
+  font-weight: 400;
+  background-color: #000;
+}
+
+section.main .mn_title .mn_title_box > h2 {
+  font-size: 8rem;
+}
+
+section.main > .mn_contact {
+  position: absolute;
+  left: calc(50% - 40%);
+  bottom: -250px;
+  width: 80%;
+  padding: 20px 0 50px;
+  text-align: center;
+  background-color: #000;
+}
+
+section.main > .mn_contact > h2 {
+  position: relative;
+  margin: 30px 0 10px;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 25px;
+}
+
+section.main > .mn_contact > h2:before {
+  content: "[";
+  position: absolute;
+  left: 150px;
+  top: 5px;
+  color: #7c1e42;
+  font-weight: 100;
+  font-size: 50px;
+}
+
+section.main > .mn_contact > h2:after {
+  content: "]";
+  position: absolute;
+  right: 150px;
+  top: 5px;
+  color: #7c1e42;
+  font-weight: 100;
+  font-size: 50px;
+}
+
+section.main > .mn_contact > p {
+  padding-top: 30px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.3rem;
+  line-height: 20px;
+}
+
+section.main > .mn_contact > a.mn_btn {
+  display: block;
+  margin: 50px auto 0;
+  width: 150px;
+  height: 40px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #fff;
+  transition: 0.5s;
+  text-shadow: none;
+}
+
+section.main > .mn_contact > a.mn_btn:hover {
+  color: #042839;
+  background-color: #fff;
+}
+
+section.a {
+  width: 1000px;
+  height: 200px;
+  margin: 250px auto 0;
+  background-color: #f2f2f2;
+}
+
+section.slide {
+  width: 1000px;
+  height: 700px;
+  margin: 0 auto;
+  background-color: #bdbaba;
+}
+
+footer {
+  width: 1000px;
+  height: 300px;
+  margin: 0 auto;
+  background-color: #000;
+}
