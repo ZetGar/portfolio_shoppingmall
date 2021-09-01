@@ -689,12 +689,17 @@ section.shop .shop_container .cont .tab_pagenation li:nth-of-type(2) {
   margin-right: 0;
 }
 
-section.shop .shop_container .cont .tab_pagenation li:hover, section.shop .shop_container .cont .tab_pagenation li.on {
+section.shop .shop_container .cont .tab_pagenation li:hover {
+  font-weight: 800;
+  border-bottom: 3px solid #000;
+}
+
+section.shop .shop_container .cont .tab_pagenation li.on {
   font-weight: 800;
   border-bottom: 3px solid #7c1e42;
 }
 
-section.shop .shop_container .cont .tab_pagenation li:hover a, section.shop .shop_container .cont .tab_pagenation li.on a {
+section.shop .shop_container .cont .tab_pagenation li.on a {
   color: #7c1e42;
 }
 
