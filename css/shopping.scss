@@ -383,26 +383,35 @@ section.product {
         h4 {
           background-color: #7c1e42;
         }
-        > ol > li {
+        ol.slide {
+          overflow: hidden;
+          position: absolute;
+          left: 0;
+          bottom: 0;
           width: 350px;
           height: 350px;
+          > li {
+            width: 350px;
+            height: 350px;
 
-          background-size: contain;
+            background-size: contain;
 
-          &.slide1 {
-            background-image: url(./../images/new1.jpg);
-          }
-          &.slide2 {
-            background-image: url(./../images/new2.jpg);
-          }
-          &.slide3 {
-            background-image: url(./../images/new3.jpg);
-          }
-          &.slide4 {
-            background-image: url(./../images/new4.jpg);
+            &.slide1 {
+              background-image: url(./../images/new1.jpg);
+            }
+            &.slide2 {
+              background-image: url(./../images/new2.jpg);
+            }
+            &.slide3 {
+              background-image: url(./../images/new3.jpg);
+            }
+            &.slide4 {
+              background-image: url(./../images/new4.jpg);
+            }
           }
         }
       }
+
       .best {
         > ol > li {
           width: 350px;
@@ -424,6 +433,38 @@ section.product {
           }
           &.slide5 {
             background-image: url(./../images/best5.jpg);
+          }
+        }
+      }
+      .sun {
+        h4 {
+          background-color: #7c1e42;
+        }
+        ol.slide {
+          // overflow: hidden;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 350px;
+          height: 350px;
+          > li {
+            width: 350px;
+            height: 350px;
+
+            background-size: contain;
+
+            &.slide1 {
+              background-image: url(./../images/new1.jpg);
+            }
+            &.slide2 {
+              background-image: url(./../images/new2.jpg);
+            }
+            &.slide3 {
+              background-image: url(./../images/new3.jpg);
+            }
+            &.slide4 {
+              background-image: url(./../images/new4.jpg);
+            }
           }
         }
       }

@@ -19,14 +19,18 @@ $(function(){
   
   // section_product 슬라이드
   const slideFn = function(){
-    const $container = $('.slide');
+    const $slide = $(".slide");
+    const $new = $(".newbox");
+    const $best = $(".bestbox");
+    const $sun = $(".sunbox");
     const $firSlide = $(".slide li").eq(0);
     const $secSlide = $(".slide li").eq(1);
 
     $secSlide.animate({bottom:0}, 1000, function(){
       $firSlide.css({bottom:370});
-      $firSlide.appendTo($container);
+      $firSlide.appendTo($slide);
     });
+
   };
 
   $(window).on('load', function(){
