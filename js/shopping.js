@@ -18,7 +18,6 @@ $(function(){
 
   
   // section_product 슬라이드
-
   const slideFn = function(){
     const $container = $('.slide');
     const $firSlide = $(".slide li").eq(0);
@@ -32,6 +31,23 @@ $(function(){
 
   $(window).on('load', function(){
     setInterval(slideFn, 2000);
+  });
+
+  
+  // section_shop 탭메뉴
+  const $tabmnu=$('.tab_pagenation li>a');
+  const $tabcontainer=$('.tab_container');
+
+  $tabmnu.on('click', function(evt){
+    evt.preventDefault();
+
+    let nowIdx=$tabmnu.index(this);
+
+    $(this).parent().addClass('on').siblings().removeClass('on');
+
+    $tabcontainer.animate({
+      left:-800*nowIdx
+    });
   });
 
 });
