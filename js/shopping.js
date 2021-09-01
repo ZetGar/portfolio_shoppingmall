@@ -20,7 +20,7 @@ $(function(){
   // section_product 슬라이드
 
   const slideFn = function(){
-    const $container = $('.slide');
+    const $container = $('slide');
     const $firSlide = $(".slide li").eq(0);
     const $secSlide = $(".slide li").eq(1);
 
