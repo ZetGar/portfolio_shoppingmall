@@ -84,19 +84,20 @@ a:active {
 
 header {
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 99999;
   width: 100vw;
-  height: 87px;
+  height: 117px;
   padding-top: 30px;
   background-color: #fff;
 }
 
 header > .hd_container {
-  position: fixed;
-  top: 0;
-  left: calc(50% - 490px);
-  z-index: 99999;
-  width: 1000px;
+  position: relative;
+  width: 1200px;
+  height: 117px;
+  margin: 0 auto;
   background-color: #fff;
 }
 
@@ -121,16 +122,16 @@ header > .hd_container > .user {
   position: absolute;
   right: 0;
   top: 10px;
-  width: 140px;
+  z-index: 9999;
 }
 
 header > .hd_container > .user > li {
-  width: 70px;
   border-right: 1px solid #555;
 }
 
 header > .hd_container > .user > li > a {
   display: block;
+  padding: 0 20px;
   color: #555;
   font-size: 1.2rem;
   text-align: center;
@@ -138,6 +139,10 @@ header > .hd_container > .user > li > a {
 
 header > .hd_container > .user > li:nth-of-type(2) {
   border-right: none;
+}
+
+header > .hd_container > .user > li:nth-of-type(2) > a {
+  padding-right: 0;
 }
 
 header > .hd_container > .user > li:hover {
@@ -186,9 +191,9 @@ header > .hd_container > nav > .gnb > li > ol > li > a {
 
 section.main {
   position: relative;
-  width: 1000px;
+  width: 100vw;
   height: 600px;
-  margin: 60px auto 0;
+  margin: 67px auto 0;
 }
 
 section.main:after {
@@ -196,7 +201,7 @@ section.main:after {
   display: block;
   position: absolute;
   top: calc(50% - 50px);
-  width: 1000px;
+  width: 100vw;
   height: 150px;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -204,16 +209,16 @@ section.main:after {
 section.main .mn_img {
   overflow: hidden;
   position: relative;
-  width: 1000px;
+  width: calc(100vw * 4);
   height: 600px;
-  margin: 55px auto 0;
+  margin: 80px auto 0;
 }
 
 section.main .mn_img > .mn_slidecontainer > li {
   position: absolute;
   top: 0;
-  left: 1000px;
-  width: 1000px;
+  left: 100vw;
+  width: calc(100vw);
   background-position: center;
   background-size: cover;
 }
@@ -227,30 +232,30 @@ section.main .mn_img > .mn_slidecontainer > li > a {
 section.main .mn_img > .mn_slidecontainer > li.mn_1 {
   left: 0;
   background-image: url(./../images/main_1.jpg);
-  background-size: 170%;
-  background-position: center -100px;
+  background-size: 200%;
+  background-position: center -300px;
 }
 
 section.main .mn_img > .mn_slidecontainer > li.mn_2 {
   background-image: url(./../images/main_2.jpg);
-  background-size: 140%;
-  background-position: center -200px;
+  background-size: 170%;
+  background-position: center -600px;
 }
 
 section.main .mn_img > .mn_slidecontainer > li.mn_3 {
   background-image: url(./../images/main_3.jpg);
-  background-size: 140%;
-  background-position: center 0;
+  background-size: 170%;
+  background-position: center -100px;
 }
 
 section.main .mn_img > .mn_slidecontainer > li.mn_4 {
   background-image: url(./../images/main_4.jpg);
-  background-size: 140%;
-  background-position: center -70px;
+  background-size: 200%;
+  background-position: center -300px;
 }
 
 section.main .mn_title {
-  width: 1000px;
+  width: 1200px;
 }
 
 section.main .mn_title .mn_title_box {
@@ -280,9 +285,9 @@ section.main .mn_title .mn_title_box > h2 {
 
 section.main > .mn_contact {
   position: absolute;
-  left: calc(50% - 40%);
-  bottom: -300px;
-  width: 80%;
+  left: calc(50% - 35%);
+  bottom: -350px;
+  width: 70%;
   padding: 20px 0 50px;
   text-align: center;
   background-color: #000;
@@ -299,7 +304,7 @@ section.main > .mn_contact > h2 {
 section.main > .mn_contact > h2:before {
   content: "[";
   position: absolute;
-  left: 150px;
+  left: 400px;
   top: 5px;
   color: #7c1e42;
   font-weight: 100;
@@ -309,7 +314,7 @@ section.main > .mn_contact > h2:before {
 section.main > .mn_contact > h2:after {
   content: "]";
   position: absolute;
-  right: 150px;
+  right: 400px;
   top: 5px;
   color: #7c1e42;
   font-weight: 100;
@@ -343,15 +348,211 @@ section.main > .mn_contact > a.mn_btn:hover {
   background-color: #fff;
 }
 
-section.a {
-  width: 1000px;
-  height: 200px;
+section.product {
+  width: 100vw;
+  height: 400px;
+  margin: 350px auto 0;
+}
+
+section.product .pd_container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+section.product .pd_container h3 {
+  padding: 100px 0 50px;
+  text-align: center;
+  font-size: 2.3rem;
+}
+
+section.product .pd_container .flexbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.product .pd_container .flexbox .fbox {
+  position: relative;
+  width: 350px;
+  height: 400px;
+  box-sizing: border-box;
+}
+
+section.product .pd_container .flexbox .fbox h4 {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  background-color: #888888;
+}
+
+section.product .pd_container .flexbox .fbox ol.slide {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 350px;
+  height: 350px;
+}
+
+section.product .pd_container .flexbox .fbox ol.slide:hover {
+  outline: 1px solid #7c1e42;
+}
+
+section.product .pd_container .flexbox .fbox ol.slide li {
+  position: absolute;
+  bottom: 370px;
+  width: 350px;
+  height: 350px;
+}
+
+section.product .pd_container .flexbox .fbox ol.slide li.slide1 {
+  bottom: 0;
+}
+
+section.product .pd_container .flexbox .fbox ol.slide li a {
+  display: block;
+  width: 350px;
+  height: 350px;
+  text-indent: -9999px;
+}
+
+section.product .pd_container .flexbox .fbox ol.slide li a .pic_contact {
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  width: 350px;
+  height: 350px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+section.product .pd_container .flexbox .fbox ol.slide li a .pic_contact h3 {
+  font-size: 2rem;
+}
+
+section.product .pd_container .flexbox .new h4 {
+  background-color: #7c1e42;
+}
+
+section.product .pd_container .flexbox .new > ol > li {
+  width: 350px;
+  height: 350px;
+  background-size: contain;
+}
+
+section.product .pd_container .flexbox .new > ol > li.slide1 {
+  background-image: url(./../images/new1.jpg);
+}
+
+section.product .pd_container .flexbox .new > ol > li.slide2 {
+  background-image: url(./../images/new2.jpg);
+}
+
+section.product .pd_container .flexbox .new > ol > li.slide3 {
+  background-image: url(./../images/new3.jpg);
+}
+
+section.product .pd_container .flexbox .new > ol > li.slide4 {
+  background-image: url(./../images/new4.jpg);
+}
+
+section.product .pd_container .flexbox .best > ol > li {
+  width: 350px;
+  height: 350px;
+  background-size: contain;
+}
+
+section.product .pd_container .flexbox .best > ol > li.slide1 {
+  background-image: url(./../images/best1.jpg);
+}
+
+section.product .pd_container .flexbox .best > ol > li.slide2 {
+  background-image: url(./../images/best2.jpg);
+}
+
+section.product .pd_container .flexbox .best > ol > li.slide3 {
+  background-image: url(./../images/best3.jpg);
+}
+
+section.product .pd_container .flexbox .best > ol > li.slide4 {
+  background-image: url(./../images/best4.jpg);
+}
+
+section.product .pd_container .flexbox .best > ol > li.slide5 {
+  background-image: url(./../images/best5.jpg);
+}
+
+section.small {
+  width: 100vw;
+  height: 300px;
   margin: 300px auto 0;
-  background-color: #f2f2f2;
+  background-color: #000;
+}
+
+section.small .sm_container {
+  position: relative;
+  width: 1200px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+section.small .sm_container:after {
+  content: "FULL TITANIUM";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 600px);
+  z-index: 100;
+  width: 1200px;
+  height: 300px;
+  color: #e4e4e4;
+  letter-spacing: 40px;
+  font-size: 3rem;
+  font-weight: 100;
+  text-align: center;
+  line-height: 300px;
+  transition: 0.6s;
+}
+
+section.small .sm_container:hover:after {
+  content: "";
+  z-index: 0;
+  background-color: transparent;
+}
+
+section.small .sm_container:hover > ul > li {
+  opacity: 1;
+}
+
+section.small .sm_container > ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 300px;
+  position: relative;
+  z-index: 2;
+}
+
+section.small .sm_container > ul > li {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #7c1e42;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+section.small .sm_container > ul > li > a {
+  display: block;
+  color: #7c1e42;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 120px;
+  text-align: center;
 }
 
 section.slide {
-  width: 1000px;
+  width: 1200px;
   height: 700px;
   margin: 0 auto;
   background-color: #bdbaba;
@@ -366,7 +567,7 @@ footer .ft_container {
   display: flex;
   justify-content: space-between;
   position: relative;
-  width: 1000px;
+  width: 1200px;
   height: 250px;
   margin: 0 auto;
   padding: 50px 0;

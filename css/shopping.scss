@@ -6,20 +6,20 @@
 }
 header {
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 99999;
 
   width: 100vw;
-  height: 87px;
+  height: 117px;
   padding-top: 30px;
   background-color: #fff;
 
   > .hd_container {
-    position: fixed;
-    top: 0;
-    left: calc(50% - 490px);
-    z-index: 99999;
-
-    width: 1000px;
+    position: relative;
+    width: 1200px;
+    height: 117px;
+    margin: 0 auto;
 
     background-color: #fff;
 
@@ -44,13 +44,13 @@ header {
       position: absolute;
       right: 0;
       top: 10px;
-      width: 140px;
+      z-index: 9999;
       > li {
-        width: 70px;
         border-right: 1px solid #555;
 
         > a {
           display: block;
+          padding: 0 20px;
           color: #555;
           font-size: 1.2rem;
           text-align: center;
@@ -58,6 +58,9 @@ header {
 
         &:nth-of-type(2) {
           border-right: none;
+          > a {
+            padding-right: 0;
+          }
         }
 
         &:hover {
@@ -116,17 +119,18 @@ header {
 
 section.main {
   position: relative;
-  width: 1000px;
+  width: 100vw;
   height: 600px;
-  margin: 60px auto 0;
+  margin: 67px auto 0;
 
   &:after {
     content: "";
     display: block;
+
     position: absolute;
     top: calc(50% - 50px);
 
-    width: 1000px;
+    width: 100vw;
     height: 150px;
 
     background-color: rgba(0, 0, 0, 0.5);
@@ -136,16 +140,16 @@ section.main {
     overflow: hidden;
     position: relative;
 
-    width: 1000px;
+    width: calc(100vw * 4);
     height: 600px;
-    margin: 55px auto 0;
+    margin: 80px auto 0;
 
     > .mn_slidecontainer {
       > li {
         position: absolute;
         top: 0;
-        left: 1000px;
-        width: 1000px;
+        left: 100vw;
+        width: calc(100vw);
 
         background-position: center;
         background-size: cover;
@@ -159,30 +163,30 @@ section.main {
         &.mn_1 {
           left: 0;
           background-image: url(./../images/main_1.jpg);
-          background-size: 170%;
-          background-position: center -100px;
+          background-size: 200%;
+          background-position: center -300px;
         }
         &.mn_2 {
           background-image: url(./../images/main_2.jpg);
-          background-size: 140%;
-          background-position: center -200px;
+          background-size: 170%;
+          background-position: center -600px;
         }
         &.mn_3 {
           background-image: url(./../images/main_3.jpg);
-          background-size: 140%;
-          background-position: center 0;
+          background-size: 170%;
+          background-position: center -100px;
         }
         &.mn_4 {
           background-image: url(./../images/main_4.jpg);
-          background-size: 140%;
-          background-position: center -70px;
+          background-size: 200%;
+          background-position: center -300px;
         }
       }
     }
   }
 
   .mn_title {
-    width: 1000px;
+    width: 1200px;
 
     .mn_title_box {
       position: absolute;
@@ -214,9 +218,9 @@ section.main {
 
   > .mn_contact {
     position: absolute;
-    left: calc(50% - 40%);
-    bottom: -300px;
-    width: 80%;
+    left: calc(50% - 35%);
+    bottom: -350px;
+    width: 70%;
     padding: 20px 0 50px;
 
     text-align: center;
@@ -235,7 +239,7 @@ section.main {
         content: "[";
 
         position: absolute;
-        left: 150px;
+        left: 400px;
         top: 5px;
 
         color: #7c1e42;
@@ -247,7 +251,7 @@ section.main {
         content: "]";
 
         position: absolute;
-        right: 150px;
+        right: 400px;
         top: 5px;
 
         color: #7c1e42;
@@ -287,15 +291,222 @@ section.main {
   }
 }
 
-section.a {
-  width: 1000px;
-  height: 200px;
+section.product {
+  width: 100vw;
+  height: 400px;
+  margin: 350px auto 0;
+
+  // background-color: #f2f2f2;
+
+  .pd_container {
+    width: 1200px;
+    margin: 0 auto;
+
+    h3 {
+      padding: 100px 0 50px;
+      text-align: center;
+      font-size: 2.3rem;
+    }
+
+    .flexbox {
+      display: flex;
+      justify-content: space-between;
+
+      .fbox {
+        position: relative;
+        width: 350px;
+        height: 400px;
+        box-sizing: border-box;
+
+        h4 {
+          margin-bottom: 10px;
+
+          padding: 5px 10px;
+          color: #fff;
+          font-size: 1.5rem;
+          font-weight: 400;
+          text-align: center;
+          background-color: rgb(136, 136, 136);
+        }
+
+        ol.slide {
+          // overflow: hidden;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 350px;
+          height: 350px;
+
+          &:hover {
+            outline: 1px solid #7c1e42;
+          }
+
+          li {
+            position: absolute;
+            bottom: 370px;
+
+            width: 350px;
+            height: 350px;
+
+            &.slide1 {
+              bottom: 0;
+            }
+
+            a {
+              display: block;
+
+              width: 350px;
+              height: 350px;
+
+              text-indent: -9999px;
+
+              .pic_contact {
+                position: absolute;
+                bottom: 0;
+                z-index: 100;
+
+                width: 350px;
+                height: 350px;
+                color: #fff;
+                background-color: rgba(0, 0, 0, 0.3);
+
+                h3 {
+                  font-size: 2rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .new {
+        h4 {
+          background-color: #7c1e42;
+        }
+        > ol > li {
+          width: 350px;
+          height: 350px;
+
+          background-size: contain;
+
+          &.slide1 {
+            background-image: url(./../images/new1.jpg);
+          }
+          &.slide2 {
+            background-image: url(./../images/new2.jpg);
+          }
+          &.slide3 {
+            background-image: url(./../images/new3.jpg);
+          }
+          &.slide4 {
+            background-image: url(./../images/new4.jpg);
+          }
+        }
+      }
+      .best {
+        > ol > li {
+          width: 350px;
+          height: 350px;
+
+          background-size: contain;
+
+          &.slide1 {
+            background-image: url(./../images/best1.jpg);
+          }
+          &.slide2 {
+            background-image: url(./../images/best2.jpg);
+          }
+          &.slide3 {
+            background-image: url(./../images/best3.jpg);
+          }
+          &.slide4 {
+            background-image: url(./../images/best4.jpg);
+          }
+          &.slide5 {
+            background-image: url(./../images/best5.jpg);
+          }
+        }
+      }
+    }
+  }
+}
+
+section.small {
+  width: 100vw;
+  height: 300px;
   margin: 300px auto 0;
 
-  background-color: #f2f2f2;
+  background-color: #000;
+
+  .sm_container {
+    position: relative;
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+
+    &:after {
+      content: "FULL TITANIUM";
+
+      position: absolute;
+      top: 0;
+      left: calc(50% - 600px);
+      z-index: 100;
+
+      width: 1200px;
+      height: 300px;
+
+      color: #e4e4e4;
+      letter-spacing: 40px;
+      font-size: 3rem;
+      font-weight: 100;
+      text-align: center;
+      line-height: 300px;
+
+      transition: 0.6s;
+    }
+
+    &:hover {
+      &:after {
+        content: "";
+        z-index: 0;
+        background-color: transparent;
+      }
+
+      > ul > li {
+        opacity: 1;
+      }
+    }
+
+    > ul {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 300px;
+      position: relative;
+      z-index: 2;
+
+      > li {
+        width: 120px;
+        height: 120px;
+
+        border-radius: 50%;
+        background-color: #7c1e42;
+        opacity: 0;
+        transition: 0.6s;
+        > a {
+          display: block;
+          color: #7c1e42;
+          font-size: 1.5rem;
+          font-weight: 800;
+          line-height: 120px;
+          text-align: center;
+        }
+      }
+    }
+  }
 }
 section.slide {
-  width: 1000px;
+  width: 1200px;
   height: 700px;
   margin: 0 auto;
 
@@ -311,7 +522,7 @@ footer {
     justify-content: space-between;
 
     position: relative;
-    width: 1000px;
+    width: 1200px;
     height: 250px;
     margin: 0 auto;
     padding: 50px 0;
