@@ -459,60 +459,47 @@ section.product .pd_container .flexbox .new ol > li.slide4 {
   background-image: url(./../images/new4.jpg);
 }
 
-section.product .pd_container .best > ol > li {
+section.product .pd_container .flexbox .best > ol > li {
   width: 350px;
   height: 350px;
   background-size: contain;
 }
 
-section.product .pd_container .best > ol > li.slide1 {
+section.product .pd_container .flexbox .best > ol > li.slide1 {
   background-image: url(./../images/best1.jpg);
 }
 
-section.product .pd_container .best > ol > li.slide2 {
+section.product .pd_container .flexbox .best > ol > li.slide2 {
   background-image: url(./../images/best2.jpg);
 }
 
-section.product .pd_container .best > ol > li.slide3 {
+section.product .pd_container .flexbox .best > ol > li.slide3 {
   background-image: url(./../images/best3.jpg);
 }
 
-section.product .pd_container .best > ol > li.slide4 {
+section.product .pd_container .flexbox .best > ol > li.slide4 {
   background-image: url(./../images/best4.jpg);
 }
 
-section.product .pd_container .best > ol > li.slide5 {
+section.product .pd_container .flexbox .best > ol > li.slide5 {
   background-image: url(./../images/best5.jpg);
 }
 
-section.product .pd_container .sun h4 {
-  background-color: #7c1e42;
-}
-
-section.product .pd_container .sun ol.slide {
-  overflow: hidden;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 350px;
-  height: 350px;
-}
-
-section.product .pd_container .sun ol.slide > li {
+section.product .pd_container .flexbox .sun ol > li {
   width: 350px;
   height: 350px;
   background-size: contain;
 }
 
-section.product .pd_container .sun ol.slide > li.slide1 {
+section.product .pd_container .flexbox .sun ol > li.slide1 {
   background-image: url(./../images/sun1.jpg);
 }
 
-section.product .pd_container .sun ol.slide > li.slide2 {
+section.product .pd_container .flexbox .sun ol > li.slide2 {
   background-image: url(./../images/sun2.jpg);
 }
 
-section.product .pd_container .sun ol.slide > li.slide3 {
+section.product .pd_container .flexbox .sun ol > li.slide3 {
   background-image: url(./../images/sun3.jpg);
 }
 

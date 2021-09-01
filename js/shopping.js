@@ -19,13 +19,29 @@ $(function(){
   
   // section_product 슬라이드
   const slideFn = function(){
-    const $slide = $(".slide");
-    const $firSlide = $(".slide li").eq(0);
-    const $secSlide = $(".slide li").eq(1);
+    const $slideN = $(".newbox");
+    const $slideB = $(".bestbox");
+    const $slideS = $(".sunbox");
+    const $firSlideN = $(".newbox li").eq(0);
+    const $secSlideN = $(".newbox li").eq(1);
+    const $firSlideB = $(".bestbox li").eq(0);
+    const $secSlideB = $(".bestbox li").eq(1);
+    const $firSlideS = $(".sunbox li").eq(0);
+    const $secSlideS = $(".sunbox li").eq(1);
+    // const $classname = $firSlide.attr('class');
 
-    $secSlide.animate({bottom:0}, 1000, function(){
-      $firSlide.css({bottom:370});
-      $firSlide.appendTo($slide);
+    $secSlideN.animate({bottom:0}, 1000, function(){
+      $firSlideN.css({bottom:370});
+      $firSlideN.appendTo($slideN);
+      // console.log($classname);
+    });
+    $secSlideB.animate({bottom:0}, 1000, function(){
+      $firSlideB.css({bottom:370});
+      $firSlideB.appendTo($slideB);
+    });
+    $secSlideS.animate({bottom:0}, 1000, function(){
+      $firSlideS.css({bottom:370});
+      $firSlideS.appendTo($slideS);
     });
 
   };
@@ -33,6 +49,7 @@ $(function(){
   $(window).on('load', function(){
     setInterval(slideFn, 2000);
   });
+
 
 
   
