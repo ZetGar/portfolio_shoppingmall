@@ -448,16 +448,13 @@ section.product {
           background-size: contain;
 
           &.slide1 {
-            background-image: url(./../images/new1.jpg);
+            background-image: url(./../images/sun1.jpg);
           }
           &.slide2 {
-            background-image: url(./../images/new2.jpg);
+            background-image: url(./../images/sun2.jpg);
           }
           &.slide3 {
-            background-image: url(./../images/new3.jpg);
-          }
-          &.slide4 {
-            background-image: url(./../images/new4.jpg);
+            background-image: url(./../images/sun3.jpg);
           }
         }
       }
