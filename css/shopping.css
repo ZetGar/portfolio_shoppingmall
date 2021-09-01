@@ -389,6 +389,7 @@ section.product .pd_container .flexbox .fbox h4 {
 }
 
 section.product .pd_container .flexbox .fbox ol.slide {
+  overflow: hidden;
   position: absolute;
   left: 0;
   bottom: 0;
