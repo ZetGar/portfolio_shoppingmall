@@ -433,7 +433,7 @@ section.product {
 
 section.small {
   width: 100vw;
-  height: 300px;
+  height: 200px;
   margin: 300px auto 0;
 
   background-color: #000;
@@ -441,7 +441,7 @@ section.small {
   .sm_container {
     position: relative;
     width: 1200px;
-    height: 300px;
+    height: 200px;
     margin: 0 auto;
 
     &:after {
@@ -453,14 +453,14 @@ section.small {
       z-index: 100;
 
       width: 1200px;
-      height: 300px;
+      height: 200px;
 
       color: #e4e4e4;
       letter-spacing: 40px;
       font-size: 3rem;
       font-weight: 100;
       text-align: center;
-      line-height: 300px;
+      line-height: 200px;
 
       transition: 0.6s;
     }
@@ -481,7 +481,7 @@ section.small {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      height: 300px;
+      height: 200px;
       position: relative;
       z-index: 2;
 
@@ -490,22 +490,83 @@ section.small {
         height: 120px;
 
         border-radius: 50%;
-        background-color: #7c1e42;
+        background-color: #acacac;
+        background-size: contain;
         opacity: 0;
         transition: 0.6s;
+
+        &:nth-last-of-type(1) {
+          background-image: url(./../images/sm4.png);
+
+          > a:after {
+            content: "DETAIL";
+          }
+        }
+        &:nth-last-of-type(2) {
+          background-image: url(./../images/sm2.png);
+
+          > a:after {
+            content: "QUALITY";
+          }
+        }
+        &:nth-last-of-type(3) {
+          background-image: url(./../images/sm3.png);
+
+          > a:after {
+            content: "REASONABLE";
+          }
+        }
+        &:nth-last-of-type(4) {
+          background-image: url(./../images/sm1.png);
+
+          > a:after {
+            content: "OPTIMIZATION";
+          }
+        }
+
         > a {
           display: block;
-          color: #7c1e42;
+          position: relative;
+          z-index: 100;
+
+          color: #f2f2f2;
           font-size: 1.5rem;
-          font-weight: 800;
+          font-weight: 700;
           line-height: 120px;
           text-align: center;
+          text-indent: -9999px;
+
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+
+            width: 120px;
+            height: 120px;
+
+            background-color: rgba(0, 0, 0, 0.4);
+          }
+
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 120px;
+            height: 120px;
+            text-indent: 0;
+          }
         }
       }
     }
   }
 }
-section.slide {
+section.a {
   width: 1200px;
   height: 700px;
   margin: 0 auto;

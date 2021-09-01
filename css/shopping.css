@@ -485,7 +485,7 @@ section.product .pd_container .flexbox .best > ol > li.slide5 {
 
 section.small {
   width: 100vw;
-  height: 300px;
+  height: 200px;
   margin: 300px auto 0;
   background-color: #000;
 }
@@ -493,7 +493,7 @@ section.small {
 section.small .sm_container {
   position: relative;
   width: 1200px;
-  height: 300px;
+  height: 200px;
   margin: 0 auto;
 }
 
@@ -504,13 +504,13 @@ section.small .sm_container:after {
   left: calc(50% - 600px);
   z-index: 100;
   width: 1200px;
-  height: 300px;
+  height: 200px;
   color: #e4e4e4;
   letter-spacing: 40px;
   font-size: 3rem;
   font-weight: 100;
   text-align: center;
-  line-height: 300px;
+  line-height: 200px;
   transition: 0.6s;
 }
 
@@ -528,7 +528,7 @@ section.small .sm_container > ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 300px;
+  height: 200px;
   position: relative;
   z-index: 2;
 }
@@ -537,21 +537,80 @@ section.small .sm_container > ul > li {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background-color: #7c1e42;
+  background-color: #acacac;
+  background-size: contain;
   opacity: 0;
   transition: 0.6s;
 }
 
-section.small .sm_container > ul > li > a {
-  display: block;
-  color: #7c1e42;
-  font-size: 1.5rem;
-  font-weight: 800;
-  line-height: 120px;
-  text-align: center;
+section.small .sm_container > ul > li:nth-last-of-type(1) {
+  background-image: url(./../images/sm4.png);
 }
 
-section.slide {
+section.small .sm_container > ul > li:nth-last-of-type(1) > a:after {
+  content: "DETAIL";
+}
+
+section.small .sm_container > ul > li:nth-last-of-type(2) {
+  background-image: url(./../images/sm2.png);
+}
+
+section.small .sm_container > ul > li:nth-last-of-type(2) > a:after {
+  content: "QUALITY";
+}
+
+section.small .sm_container > ul > li:nth-last-of-type(3) {
+  background-image: url(./../images/sm3.png);
+}
+
+section.small .sm_container > ul > li:nth-last-of-type(3) > a:after {
+  content: "REASONABLE";
+}
+
+section.small .sm_container > ul > li:nth-last-of-type(4) {
+  background-image: url(./../images/sm1.png);
+}
+
+section.small .sm_container > ul > li:nth-last-of-type(4) > a:after {
+  content: "OPTIMIZATION";
+}
+
+section.small .sm_container > ul > li > a {
+  display: block;
+  position: relative;
+  z-index: 100;
+  color: #f2f2f2;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 120px;
+  text-align: center;
+  text-indent: -9999px;
+}
+
+section.small .sm_container > ul > li > a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+section.small .sm_container > ul > li > a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  text-indent: 0;
+}
+
+section.a {
   width: 1200px;
   height: 700px;
   margin: 0 auto;
