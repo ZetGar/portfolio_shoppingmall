@@ -20,9 +20,6 @@ $(function(){
   // section_product 슬라이드
   const slideFn = function(){
     const $slide = $(".slide");
-    const $new = $(".newbox");
-    const $best = $(".bestbox");
-    const $sun = $(".sunbox");
     const $firSlide = $(".slide li").eq(0);
     const $secSlide = $(".slide li").eq(1);
 
@@ -36,6 +33,7 @@ $(function(){
   $(window).on('load', function(){
     setInterval(slideFn, 2000);
   });
+
 
   
   // section_shop 탭메뉴
