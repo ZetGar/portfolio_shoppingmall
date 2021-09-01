@@ -221,6 +221,7 @@ section.main .mn_img > .mn_slidecontainer > li {
   width: calc(100vw);
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 section.main .mn_img > .mn_slidecontainer > li > a {
