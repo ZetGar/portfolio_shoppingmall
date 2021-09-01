@@ -304,7 +304,7 @@ section.main > .mn_contact > h2 {
 section.main > .mn_contact > h2:before {
   content: "[";
   position: absolute;
-  left: 200px;
+  left: 20%;
   top: 5px;
   color: #7c1e42;
   font-weight: 100;
@@ -314,7 +314,7 @@ section.main > .mn_contact > h2:before {
 section.main > .mn_contact > h2:after {
   content: "]";
   position: absolute;
-  right: 200px;
+  right: 20%;
   top: 5px;
   color: #7c1e42;
   font-weight: 100;
