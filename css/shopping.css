@@ -79,7 +79,13 @@ a:active {
 
 #wrap {
   display: grid;
-  grid-template: repeat(3, auto)/1fr;
+  grid-template: repeat(5, auto)/1fr;
+}
+
+@media screen and (max-width: 992px) {
+  #wrap {
+    overflow-x: hidden;
+  }
 }
 
 header {
@@ -91,6 +97,14 @@ header {
   height: 117px;
   padding-top: 30px;
   background-color: #fff;
+}
+
+@media screen and (max-width: 992px) {
+  header {
+    width: 100%;
+    height: 70px;
+    padding-top: 0;
+  }
 }
 
 header > .hd_container {
@@ -189,11 +203,25 @@ header > .hd_container > nav > .gnb > li > ol > li > a {
   display: block;
 }
 
+@media screen and (max-width: 992px) {
+  header > .hd_container {
+    width: 100%;
+    height: 70px;
+  }
+  header > .hd_container .logo {
+    position: absolute;
+    left: 20px;
+  }
+  header > .hd_container .user,
+  header > .hd_container nav {
+    display: none;
+  }
+}
+
 section.main {
   position: relative;
   width: 100vw;
-  height: 600px;
-  margin: 67px auto 0;
+  margin: 0 auto;
 }
 
 section.main:after {
@@ -211,7 +239,7 @@ section.main .mn_img {
   position: relative;
   width: calc(100vw * 4);
   height: 600px;
-  margin: 80px auto 0;
+  margin: 145px auto 0;
 }
 
 section.main .mn_img > .mn_slidecontainer > li {
@@ -261,7 +289,7 @@ section.main .mn_title {
 
 section.main .mn_title .mn_title_box {
   position: absolute;
-  top: 250px;
+  top: calc(50% - 50px);
   left: calc(50% - 25%);
   z-index: 100;
   width: 50%;
@@ -284,17 +312,18 @@ section.main .mn_title .mn_title_box > h2 {
   font-size: 8rem;
 }
 
-section.main > .mn_contact {
+section.main .mn_contact {
   position: absolute;
   left: calc(50% - 35%);
-  bottom: -350px;
+  bottom: -30%;
   width: 70%;
-  padding: 20px 0 50px;
+  padding: 20px 50px 50px;
   text-align: center;
   background-color: #000;
+  box-sizing: border-box;
 }
 
-section.main > .mn_contact > h2 {
+section.main .mn_contact > h2 {
   position: relative;
   margin: 30px 0 10px;
   color: #fff;
@@ -302,7 +331,7 @@ section.main > .mn_contact > h2 {
   line-height: 25px;
 }
 
-section.main > .mn_contact > h2:before {
+section.main .mn_contact > h2:before {
   content: "[";
   position: absolute;
   left: 20%;
@@ -312,7 +341,7 @@ section.main > .mn_contact > h2:before {
   font-size: 50px;
 }
 
-section.main > .mn_contact > h2:after {
+section.main .mn_contact > h2:after {
   content: "]";
   position: absolute;
   right: 20%;
@@ -322,14 +351,14 @@ section.main > .mn_contact > h2:after {
   font-size: 50px;
 }
 
-section.main > .mn_contact > p {
+section.main .mn_contact > p {
   padding-top: 30px;
   color: rgba(255, 255, 255, 0.7);
   font-size: 1.3rem;
   line-height: 20px;
 }
 
-section.main > .mn_contact > a.mn_btn {
+section.main .mn_contact > a.mn_btn {
   display: block;
   margin: 50px auto 0;
   width: 150px;
@@ -344,15 +373,48 @@ section.main > .mn_contact > a.mn_btn {
   text-shadow: none;
 }
 
-section.main > .mn_contact > a.mn_btn:hover {
+section.main .mn_contact > a.mn_btn:hover {
   color: #000;
   background-color: #fff;
 }
 
+@media screen and (max-width: 992px) {
+  section.main {
+    margin-top: 0;
+  }
+  section.main .mn_img {
+    margin: 70px auto 0;
+    height: 50vh;
+  }
+  section.main .mn_img .mn_slidecontainer > li {
+    background-position: center center;
+  }
+  section.main .mn_img .mn_slidecontainer > li > a {
+    height: 50vh;
+  }
+  section.main .mn_img .mn_slidecontainer > li.mn_1 {
+    background-position: center -100px;
+  }
+  section.main .mn_img .mn_slidecontainer > li.mn_2 {
+    background-position: center -200px;
+  }
+  section.main .mn_img .mn_slidecontainer > li.mn_3 {
+    background-position: center 0px;
+  }
+  section.main .mn_img .mn_slidecontainer > li.mn_4 {
+    background-position: center -100px;
+  }
+  section.main .mn_title {
+    width: 100vw;
+  }
+  section.main .mn_contact {
+    bottom: -60%;
+  }
+}
+
 section.product {
   width: 100vw;
-  height: 400px;
-  margin: 350px auto 0;
+  margin: 220px auto 0;
 }
 
 section.product .pd_container {
@@ -503,10 +565,26 @@ section.product .pd_container .flexbox .sun ol > li.slide3 {
   background-image: url(./../images/sun3.jpg);
 }
 
+@media screen and (max-width: 992px) {
+  section.product {
+    margin-top: 300px;
+  }
+  section.product .pd_container {
+    width: 100vw;
+  }
+  section.product .pd_container .flexbox {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  section.product .pd_container .flexbox .fbox {
+    margin: 0 10px 50px;
+  }
+}
+
 section.small {
   width: 100vw;
   height: 200px;
-  margin: 300px auto 0;
+  margin: 150px auto 0;
   background-color: #000;
 }
 
@@ -617,6 +695,7 @@ section.small .sm_container > ul > li > a:before {
   width: 120px;
   height: 120px;
   background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
 }
 
 section.small .sm_container > ul > li > a:after {
@@ -632,14 +711,42 @@ section.small .sm_container > ul > li > a:after {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+@media screen and (max-width: 992px) {
+  section.small .sm_container {
+    width: 100vw;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.small {
+    height: 700px;
+  }
+  section.small .sm_container:after {
+    top: 250px;
+    left: calc(50% - 50%);
+    width: 100vw;
+    line-height: 6rem;
+  }
+  section.small .sm_container ul {
+    display: block;
+    width: 100vw;
+    padding: 50px 0;
+  }
+  section.small .sm_container ul li {
+    margin: 20px auto;
+  }
+}
+
 section.shop {
   width: 100vw;
-  background-color: #bdbaba;
+  height: 800px;
+  background-color: #dadada;
 }
 
 section.shop .shop_container {
   width: 1200px;
-  height: 770px;
+  height: 800px;
   margin: 0 auto;
 }
 
@@ -647,12 +754,9 @@ section.shop .shop_container .tab {
   overflow: hidden;
   position: relative;
   width: 800px;
-  height: 700px;
-  box-sizing: border-box;
-}
-
-section.shop .shop_container .cont {
+  height: 800px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 section.shop .shop_container .cont .tab_pagenation {
@@ -695,7 +799,6 @@ section.shop .shop_container .cont .tab_pagenation li a {
 }
 
 section.shop .shop_container .cont .tab_container {
-  overflow: hidden;
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -873,6 +976,72 @@ section.shop .shop_container .cont .tab_container li .optician ul li:nth-of-type
   background-color: #000;
 }
 
+@media screen and (max-width: 992px) {
+  section.shop .shop_container {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.shop .shop_container {
+    height: 800px;
+  }
+  section.shop .shop_container .shop_container {
+    height: 900px;
+  }
+  section.shop .shop_container .tab {
+    width: 100vw;
+    margin: 0 auto;
+  }
+  section.shop .shop_container .cont {
+    height: 750px;
+  }
+  section.shop .shop_container .cont .tab_pagenation {
+    display: block;
+    width: 80vw;
+    height: 100px;
+  }
+  section.shop .shop_container .cont .tab_pagenation li {
+    width: 100%;
+  }
+  section.shop .shop_container .cont .tab_container {
+    width: calc(100vw * 2);
+    margin-top: 0;
+  }
+  section.shop .shop_container .cont .tab_container li .n_people,
+  section.shop .shop_container .cont .tab_container li .optician {
+    width: 100vw;
+    height: 1500px;
+  }
+  section.shop .shop_container .cont .tab_container li .n_people h2,
+  section.shop .shop_container .cont .tab_container li .optician h2 {
+    padding: 35px 0 15px 0;
+  }
+  section.shop .shop_container .cont .tab_container li .n_people ul,
+  section.shop .shop_container .cont .tab_container li .optician ul {
+    display: block;
+    margin: 0 auto;
+  }
+  section.shop .shop_container .cont .tab_container li .n_people ul li,
+  section.shop .shop_container .cont .tab_container li .optician ul li {
+    margin: 0 auto;
+  }
+  section.shop .shop_container .cont .tab_container li .n_people ul li:nth-of-type(1),
+  section.shop .shop_container .cont .tab_container li .optician ul li:nth-of-type(1) {
+    width: 70vw;
+    height: 80px;
+  }
+  section.shop .shop_container .cont .tab_container li .n_people ul li:nth-of-type(2),
+  section.shop .shop_container .cont .tab_container li .optician ul li:nth-of-type(2) {
+    width: 70vw;
+    text-align: center;
+  }
+  section.shop .shop_container .cont .tab_container li .n_people ul li:nth-of-type(2) a.btn,
+  section.shop .shop_container .cont .tab_container li .optician ul li:nth-of-type(2) a.btn {
+    margin: 30px auto 0;
+  }
+}
+
 footer {
   width: 100vw;
   background-color: #000;
@@ -933,19 +1102,27 @@ footer .ft_container .ft_contact .ft_top .ft_comnu li:nth-of-type(1) > a {
   padding-left: 0;
 }
 
+footer .ft_container .ft_contact .ft_top .ft_comnu li:nth-of-type(4) a {
+  border-right: none;
+}
+
 footer .ft_container .ft_contact .ft_top .sns {
   display: flex;
 }
 
 footer .ft_container .ft_contact .ft_top .sns > li > a {
   display: block;
-  padding: 0 30px;
+  padding: 0 15px;
   color: #fff;
   font-weight: 800;
 }
 
+footer .ft_container .ft_contact .ft_top .sns > li > a i {
+  font-size: 2rem;
+}
+
 footer .ft_container .ft_contact .ft_top .sns > li:last-child > a {
-  padding-right: 0;
+  padding-right: 30px;
 }
 
 footer .ft_container .ft_contact .ft_b {
@@ -1009,4 +1186,74 @@ footer .ft_container .ft_contact .ft_b .ft_right ul li a span {
 
 footer .ft_container .ft_contact .ft_b .ft_right ul li:nth-of-type(4) {
   padding-top: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  footer .ft_container {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  footer .ft_container .ft_contact {
+    width: 80%;
+  }
+  footer .ft_container .ft_contact .ft_b .ft_left {
+    width: 60%;
+  }
+  footer .ft_container .ft_contact .ft_b .ft_right {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer .ft_container {
+    display: block;
+    height: 60vh;
+  }
+  footer .ft_container h2.logo {
+    position: initial;
+    margin: 0 auto 30px;
+  }
+  footer .ft_container .ft_contact {
+    width: 80vw;
+  }
+  footer .ft_container .ft_contact .ft_top {
+    display: block;
+  }
+  footer .ft_container .ft_contact .ft_top .ft_comnu {
+    justify-content: space-evenly;
+  }
+  footer .ft_container .ft_contact .ft_top .ft_comnu li:nth-of-type(4) a {
+    padding-right: 0;
+    border-right: none;
+  }
+  footer .ft_container .ft_contact .ft_top .sns {
+    display: none;
+  }
+  footer .ft_container .ft_contact .ft_b {
+    display: block;
+  }
+  footer .ft_container .ft_contact .ft_b .ft_left {
+    width: 100%;
+  }
+  footer .ft_container .ft_contact .ft_b .ft_left address {
+    text-align: center;
+  }
+  footer .ft_container .ft_contact .ft_b .ft_right {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  footer .ft_container .ft_contact .ft_b .ft_right ul {
+    width: 80%;
+    margin: 0 auto 50px;
+  }
+  footer .ft_container .ft_contact .ft_b .ft_right ul li {
+    display: inline-block;
+  }
+  footer .ft_container .ft_contact .ft_b .ft_right ul li a span {
+    font-size: 1.5rem;
+  }
+  footer .ft_container .ft_contact .ft_b .ft_right ul li:nth-of-type(4) {
+    padding-top: 0;
+  }
 }

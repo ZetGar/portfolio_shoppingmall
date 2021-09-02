@@ -56,6 +56,7 @@ $(function(){
   // section_shop 탭메뉴
   const $tabmnu=$('.tab_pagenation li>a');
   const $tabcontainer=$('.tab_container');
+  const $windowWidth = $(window).width();
 
   $tabmnu.on('click', function(evt){
     evt.preventDefault();
@@ -64,9 +65,18 @@ $(function(){
 
     $(this).parent().addClass('on').siblings().removeClass('on');
 
-    $tabcontainer.animate({
-      left:-800*nowIdx
+    if($windowWidth>768){
+      $tabcontainer.animate({
+      left: -800*nowIdx
     });
+    } else{
+      $tabcontainer.animate({
+        left: -100*nowIdx + 'vw'
+      });
+    }
+
+
+    
   });
 
 });
